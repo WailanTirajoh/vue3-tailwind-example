@@ -1,6 +1,5 @@
-<script setup lang="ts">
+export default `<script setup lang="ts">
 import { ref } from "vue";
-import formExample from "../code/form-example";
 
 const fileModel = ref([]);
 const selectExample = ref();
@@ -22,7 +21,6 @@ const selectionList = [
     value: "test3",
   },
 ];
-const codeExample = ref(formExample);
 </script>
 
 <template>
@@ -70,11 +68,7 @@ const codeExample = ref(formExample);
         <div>Result:</div>
         <pre>{{ toggleExample }}</pre>
       </div>
-      <div class="col-span-12">
-        <CodeHighlight language="html">
-          <code>{{ codeExample }}</code>
-        </CodeHighlight>
-      </div>
     </div>
   </div>
 </template>
+`;

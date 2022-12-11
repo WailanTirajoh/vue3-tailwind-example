@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import code from "../code/datatable-example";
+const codeExample = ref(code);
 const data = ref({
   column: [
     {
@@ -190,7 +192,7 @@ const datatableHook = (arg: any) => {
   <div>
     <h2 class="text-2xl font-bold">Datatable Clientside</h2>
     <hr class="my-2 border" />
-    <TwDatatableClient
+    <tw-datatable-client
       v-model:search="data.search"
       v-model:limit="data.limit"
       v-model:selected="data.selected"
@@ -202,7 +204,7 @@ const datatableHook = (arg: any) => {
       @datatable:column-hook="datatableHook"
     >
       <template #empty> No Data </template>
-    </TwDatatableClient>
+    </tw-datatable-client>
     <hr class="my-2" />
     <div>
       <div class="flex gap-2">
@@ -221,6 +223,11 @@ const datatableHook = (arg: any) => {
         <div class="w-32">Search</div>
         <div>: {{ data.search }}</div>
       </div>
+    </div>
+    <div class="col-span-12">
+      <CodeHighlight language="html">
+        <code>{{ codeExample }}</code>
+      </CodeHighlight>
     </div>
   </div>
 </template>

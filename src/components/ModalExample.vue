@@ -1,8 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+import code from "../code/modal-example";
+const codeExample = ref(code);
+</script>
 <template>
   <h2 class="text-2xl font-bold">Modal</h2>
   <hr class="my-2 border" />
-  <TwModal :full-height="false">
+  <tw-modal :full-height="false">
     <template #button>
       <TwButton> Modal </TwButton>
     </template>
@@ -15,5 +19,10 @@
     <template #footer>
       <div>Footer</div>
     </template>
-  </TwModal>
+  </tw-modal>
+  <div>
+    <CodeHighlight language="html">
+      <code>{{ codeExample }}</code>
+    </CodeHighlight>
+  </div>
 </template>

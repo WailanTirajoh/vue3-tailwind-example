@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import tabExample from "../code/tab-example";
 
 const verticalTab = ref();
 const horizontalTab = ref();
@@ -18,6 +19,7 @@ const tabs = ref([
   },
 ]);
 const currentTab = ref("tab1");
+const codeExample = ref(tabExample);
 
 const handleAfterMove = (newTab: string) => {
   currentTab.value = newTab;
@@ -33,7 +35,7 @@ const handleAfterMove = (newTab: string) => {
     <div class="grid grid-cols-12 gap-2">
       <div class="col-span-12">
         <h3 class="text-base font-medium mb-2">Horizontal Tab</h3>
-        <TwTab
+        <tw-tab
           ref="horizontalTab"
           type="horizontal"
           position="bottom"
@@ -49,11 +51,11 @@ const handleAfterMove = (newTab: string) => {
           <template #tab1> Tab 1 template </template>
           <template #tab2> Tab 2 template </template>
           <template #tab3> Tab 3 template </template>
-        </TwTab>
+        </tw-tab>
       </div>
       <div class="col-span-12">
         <h3 class="text-base font-medium mb-2">Vertical Tab</h3>
-        <TwTab
+        <tw-tab
           ref="verticalTab"
           type="vertical"
           position="bottom"
@@ -69,7 +71,12 @@ const handleAfterMove = (newTab: string) => {
           <template #tab1> Tab 1 template </template>
           <template #tab2> Tab 2 template </template>
           <template #tab3> Tab 3 template </template>
-        </TwTab>
+        </tw-tab>
+      </div>
+      <div class="col-span-12">
+        <CodeHighlight language="html">
+          <code>{{ codeExample }}</code>
+        </CodeHighlight>
       </div>
     </div>
   </div>

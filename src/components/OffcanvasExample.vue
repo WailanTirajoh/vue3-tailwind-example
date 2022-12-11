@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import code from "../code/offcanvas-example";
+const codeExample = ref(code);
 
 const example = ref(`
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi pariatur maxime, obcaecati doloremque ea
@@ -51,7 +53,7 @@ officiis debitis fuga repellendus? Quam!
     <div class="grid grid-cols-12 gap-2">
       <div class="col-span-12">
         <div class="grid md:flex gap-2">
-          <TwOffcanvas position="left">
+          <tw-offcanvas position="left">
             <template #button>
               <TwButton> Left Offcanvas </TwButton>
             </template>
@@ -59,8 +61,8 @@ officiis debitis fuga repellendus? Quam!
             <div>
               {{ example }}
             </div>
-          </TwOffcanvas>
-          <TwOffcanvas position="right">
+          </tw-offcanvas>
+          <tw-offcanvas position="right">
             <template #button>
               <TwButton> Right Offcanvas </TwButton>
             </template>
@@ -68,8 +70,8 @@ officiis debitis fuga repellendus? Quam!
             <div>
               {{ example }}
             </div>
-          </TwOffcanvas>
-          <TwOffcanvas position="right" width="800px">
+          </tw-offcanvas>
+          <tw-offcanvas position="right" width="800px">
             <template #button>
               <TwButton> Right Offcanvas with width 800px </TwButton>
             </template>
@@ -77,8 +79,8 @@ officiis debitis fuga repellendus? Quam!
             <div>
               {{ example }}
             </div>
-          </TwOffcanvas>
-          <TwOffcanvas position="left" width="600px">
+          </tw-offcanvas>
+          <tw-offcanvas position="left" width="600px">
             <template #button>
               <TwButton> Left Offcanvas with width 600px </TwButton>
             </template>
@@ -86,8 +88,8 @@ officiis debitis fuga repellendus? Quam!
             <div>
               {{ example }}
             </div>
-          </TwOffcanvas>
-          <TwOffcanvas position="top">
+          </tw-offcanvas>
+          <tw-offcanvas position="top">
             <template #button>
               <TwButton> Top Offcanvas </TwButton>
             </template>
@@ -95,8 +97,8 @@ officiis debitis fuga repellendus? Quam!
             <div>
               {{ example }}
             </div>
-          </TwOffcanvas>
-          <TwOffcanvas position="bottom">
+          </tw-offcanvas>
+          <tw-offcanvas position="bottom">
             <template #button>
               <TwButton> Bottom Offcanvas </TwButton>
             </template>
@@ -104,8 +106,13 @@ officiis debitis fuga repellendus? Quam!
             <div>
               {{ example }}
             </div>
-          </TwOffcanvas>
+          </tw-offcanvas>
         </div>
+      </div>
+      <div class="col-span-12">
+        <CodeHighlight language="html">
+          <code>{{ codeExample }}</code>
+        </CodeHighlight>
       </div>
     </div>
   </div>

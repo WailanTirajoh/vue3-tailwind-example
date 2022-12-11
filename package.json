@@ -9,6 +9,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "prismjs": "^1.29.0",
     "vue": "^3.2.45",
     "vue3-tailwind": "^0.1.10"
   },
