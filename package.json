@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.2.45",
-    "vue3-tailwind": "^0.1.8"
+    "vue3-tailwind": "^0.1.10"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",

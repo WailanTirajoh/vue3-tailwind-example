@@ -9,38 +9,30 @@
         <div
           class="grid gap-2 grid-cols-[repeat(auto-fill,_minmax(14rem,_1fr))] mb-2"
         >
-          <TwButton :variant="Variant.PRIMARY" :ripple="true">
+          <TwButton variant="primary" :ripple="true">
             Primary Button with ripple
           </TwButton>
-          <TwButton :variant="Variant.SECONDARY" :ripple="true">
+          <TwButton variant="secondary" :ripple="true">
             Secondary Button with ripple
           </TwButton>
-          <TwButton :variant="Variant.DANGER" :ripple="true">
+          <TwButton variant="danger" :ripple="true">
             Danger Button with ripple
           </TwButton>
-          <TwButton :variant="Variant.PRIMARY"> Primary Button </TwButton>
-          <TwButton :variant="Variant.SECONDARY"> Secondary Button </TwButton>
-          <TwButton :variant="Variant.DANGER"> Danger Button </TwButton>
-          <TwButton
-            icon="smile"
-            :variant="Variant.PRIMARY"
-            :icon-position="IconPosition.LEFT"
-          >
+          <TwButton variant="primary"> Primary Button </TwButton>
+          <TwButton variant="secondary"> Secondary Button </TwButton>
+          <TwButton variant="danger"> Danger Button </TwButton>
+          <TwButton icon="smile" variant="primary" icon-position="left">
             Button with Icon
           </TwButton>
-          <TwButton
-            icon="smile"
-            :variant="Variant.PRIMARY"
-            :icon-position="IconPosition.RIGHT"
-          >
+          <TwButton icon="smile" variant="primary" icon-position="right">
             Button with Icon Right
           </TwButton>
-          <TwButton icon="smile" :variant="Variant.PRIMARY" :disabled="true">
+          <TwButton icon="smile" variant="primary" :disabled="true">
             Disabled Button
           </TwButton>
           <TwButton
             icon="smile"
-            :variant="Variant.PRIMARY"
+            variant="primary"
             :disabled="true"
             :loading="true"
           >
@@ -48,8 +40,8 @@
           </TwButton>
           <TwButton
             icon="smile"
-            :variant="Variant.PRIMARY"
-            :text-position="TextPosition.LEFT"
+            variant="primary"
+            text-position="left"
             :disabled="true"
             :loading="true"
           >
